@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="logout" method="post">
+  {% csrf_token %}
+  <div class="container">
+    <h1>Order Confirmed</h1>
+    <p>You order has confirmed Thankyou.</p>
+
+    <hr>
+    <button type="submit" class="registerbtn">Logout</button>
+  </div>
+
+  <div class="container signin">
+    <p>Click to go back to<a href="{% url 'login_register:home' %}">Home</a>.</p>
+  </div>
+</form>
+{% endblock %}

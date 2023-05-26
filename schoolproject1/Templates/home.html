@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include 'navbar.html' %}
+<style>
+  .newbtn {
+  background-color: black;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  opacity: 0.9;
+}
+.newbtn:hover {
+  opacity:1;
+}
+</style>
+<form>
+  {% csrf_token %}
+  <div class="container">
+    <h1>Welcome To KVB School Store</h1>
+    <p>Wating for your purchase</p>
+
+    <hr>
+
+<p class="newbtn"> <a href="{% url 'login_register:login' %}">Click Here to Login into the School Store</a>.</p>
+
+ </div>
+
+
+</form>
+{% endblock %}
+</body>
+</html>
